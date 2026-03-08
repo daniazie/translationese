@@ -39,3 +39,4 @@ tags
 /t/
 /*.arff
 *.analysis
+.bak

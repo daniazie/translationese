@@ -7,7 +7,6 @@ passive. Passives are defined as the verb be fol- lowed by the POS tag VBN
 (past participle). We calculate the ratio of passive verbs to all verbs, and
 magnified it by an order of 6.
 """
-from six.moves import range
 
 def quantify(analysis):
     """Quantify ratio of passive forms to all verbs."""

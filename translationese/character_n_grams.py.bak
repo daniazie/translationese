@@ -12,7 +12,6 @@ prefixes and suffixes. We do not capture cross-token character `n`-grams, and
 we exclude punctuation marks.
 """
 
-from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     from nltk.util import ingrams

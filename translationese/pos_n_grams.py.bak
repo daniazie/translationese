@@ -6,7 +6,6 @@ assumption by defining as features unigrams, bigrams and trigrams of
 POS tags.
 """
 
-from __future__ import absolute_import
 from translationese.utils import output_filter_ngram, sparse_dict_increment
 
 import os

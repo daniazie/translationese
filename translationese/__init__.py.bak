@@ -1,9 +1,7 @@
-from __future__ import absolute_import
 import memoize
 import math
 import os
 from translationese.utils import flatten_list, sparse_dict_increment
-from six.moves import range
 
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk
@@ -139,7 +137,7 @@ class Analysis(object):
     @memoize.memoize
     def histogram_normalized(self):
         """Same as ``histogram``, but normalized by number of tokens."""
-        items = list(self.histogram().items())
+        items = self.histogram().items()
         num_tokens = float(len(self.tokens()))
         items_normalized = [ (x, y / num_tokens) for x, y in items ]
         return dict(items_normalized)
@@ -174,17 +172,18 @@ class Analysis(object):
 
         return dict(bigram_pmi_pairs)
 
-class MissingVariant(Exception):
+import exceptions
+class MissingVariant(exceptions.Exception):
     """Exception thrown when no variant was specified when quantifying using
     a module that requires a variant specification."""
     pass
 
-class NoVariants(Exception):
+class NoVariants(exceptions.Exception):
     """Exception thrown when a variant was specified when quantifying using
     a module that does not support variant specification."""
     pass
 
-class NoSuchVariant(Exception):
+class NoSuchVariant(exceptions.Exception):
     """Exception thrown when an invalid variant was specified when quantifying
     using a module that supports variant specification."""
     def __init__(self):

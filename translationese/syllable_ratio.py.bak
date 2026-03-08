@@ -5,7 +5,6 @@ vowel-sequences that are delimited by consonants or space in a word, normalized
 by the number of tokens in the chunk.
 """
 
-from __future__ import absolute_import
 import translationese
 import re
 
@@ -40,7 +39,7 @@ def syllables(word):
         return 0
 
     split_by_consonant_sequences = re.split('[^aeiou]', word)
-    empty_strings_removed = [_f for _f in split_by_consonant_sequences if _f]
+    empty_strings_removed = filter(None, split_by_consonant_sequences)
 
     return len(empty_strings_removed)
 

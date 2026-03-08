@@ -3,7 +3,6 @@ We assume that less frequent words are used more often in original texts than
 in translated ones.
 """
 
-from __future__ import absolute_import
 import translationese
 from translationese.word_ranks import WORD_RANKS
 
