@@ -1,5 +1,5 @@
 import unittest
-import translationese.cohesive_markers
+import translationese_eng.cohesive_markers
 
 sentence = "even if a cat is happy, it will look mad because it is a cat"
 sentence2 = "On the other hand On the other hand because"

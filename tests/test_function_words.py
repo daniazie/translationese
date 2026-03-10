@@ -1,5 +1,5 @@
 import unittest
-import translationese.function_words
+import translationese_eng.function_words
 
 sentence = "The quick brown fox jumped over the lazy dog."
 

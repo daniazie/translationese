@@ -8,8 +8,7 @@ foreign affairs).
 """
 
 from __future__ import absolute_import
-from translationese.utils import is_proper_noun
-from six.moves import range
+from translationese_eng.utils import is_proper_noun
 
 def quantify(analysis):
     """Quantify single naming."""

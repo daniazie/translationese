@@ -5,7 +5,7 @@ in translated ones.
 
 from __future__ import absolute_import
 import translationese
-from translationese.word_ranks import WORD_RANKS
+from translationese_eng.word_ranks import WORD_RANKS
 
 VERY_HIGH_RANK = 6000
 """Very high rank for a word, guessed for unknown words. The highest rank

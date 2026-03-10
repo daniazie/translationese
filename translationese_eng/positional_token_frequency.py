@@ -11,7 +11,7 @@ interesting for our purposes.
 
 from __future__ import absolute_import
 import translationese
-from translationese.utils import sparse_dict_increment
+from translationese_eng.utils import sparse_dict_increment
 
 POSITION_NAMES = {
                   "first": 0,

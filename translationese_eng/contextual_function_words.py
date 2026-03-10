@@ -11,8 +11,8 @@ See also :mod:`translationese.function_words`.
 """
 
 from __future__ import absolute_import
-from translationese.utils import output_filter_ngram, sparse_dict_increment
-from translationese.function_words import FUNCTION_WORDS
+from translationese_eng.utils import output_filter_ngram, sparse_dict_increment
+from translationese_eng.function_words import FUNCTION_WORDS
 
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':

@@ -2,8 +2,7 @@ from __future__ import absolute_import
 import memoize
 import math
 import os
-from translationese.utils import flatten_list, sparse_dict_increment
-from six.moves import range
+from translationese_eng.utils import flatten_list, sparse_dict_increment
 
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk
@@ -81,7 +80,7 @@ class Analysis(object):
         [[('I', 'PRP'), ('am', 'VBP'), ('fine', 'NN'), ('.', '.')],
         [('How', 'WRB'), ('are', 'VBP'), ('you', 'PRP'), ('?', '.')]]
         """
-        return nltk.batch_pos_tag(self.case_tokenized_sentences())
+        return nltk.pos_tag_sents(self.case_tokenized_sentences())
 
     @memoize.memoize
     def pos_tags(self):

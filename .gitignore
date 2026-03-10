@@ -39,4 +39,4 @@ tags
 /t/
 /*.arff
 *.analysis
-.bak
+translationese_ori_backup/

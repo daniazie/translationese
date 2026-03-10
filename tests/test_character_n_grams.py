@@ -6,7 +6,7 @@ Created on Dec 5, 2012
 import unittest
 
 from translationese import Analysis
-from translationese.character_n_grams import quantify_variant
+from translationese_eng.character_n_grams import quantify_variant
 from tests.util import SparseDictEqualMixin
 
 class TestCharacterNGrams(SparseDictEqualMixin, unittest.TestCase):

@@ -24,8 +24,9 @@ support :mod:`pickle` serialization.
 >>> s = pickle.dumps(k) # resulting objects can be pickled!
 """
 
+from __future__ import absolute_import
 from functools import wraps
-import cPickle as pickle
+import pickle
 import os
 import logging
 
@@ -38,9 +39,9 @@ def memoize(func):
     def wrapper(self):
         if not hasattr(self, "_memoize_cache"):
             self._memoize_cache = {}
-        if func.func_name not in self._memoize_cache:
-            self._memoize_cache[func.func_name] = func(self)
-        return self._memoize_cache[func.func_name]
+        if func.__name__ not in self._memoize_cache:
+            self._memoize_cache[func.__name__] = func(self)
+        return self._memoize_cache[func.__name__]
     return wrapper
 
 def load(obj, filename):
@@ -51,7 +52,7 @@ def load(obj, filename):
             with open(filename, "r") as f:
                 obj._memoize_cache = pickle.load(f)
     except Exception:
-        logging.warn("Invalid pickle file %s", filename)
+        logging.warning("Invalid pickle file %s", filename)
 
 def dump(obj, filename):
     """Dumps ``obj``'s memoized cache as :mod:`pickle` data into ``filename``.
