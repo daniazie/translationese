@@ -3,6 +3,7 @@ The ratio of contracted forms to their counterpart full form(s).  If the full
 form has zero occurrences, its count is changed to 1.
 """
 
+from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk

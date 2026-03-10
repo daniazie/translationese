@@ -7,7 +7,8 @@ the first name of this person (Guido) and probably his role, too (minister of
 foreign affairs).
 """
 
-from translationese.utils import is_proper_noun
+from __future__ import absolute_import
+from translationese_eng.utils import is_proper_noun
 
 def quantify(analysis):
     """Quantify single naming."""

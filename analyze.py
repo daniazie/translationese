@@ -7,6 +7,8 @@ translated ("T") files. Analysis will be performed based on
 selected properties and output to stdout in ARFF format, suitable
 for use with weka."""
 
+from __future__ import absolute_import
+from __future__ import print_function
 import os
 import sys
 import translationese
@@ -87,7 +89,7 @@ def analyze_directory(dir_to_analyze, expected_class, analyzer_module,
 def print_results(results, stream, timer):
     attributes = set()
 
-    print >> stream, "@relation translationese"
+    print("@relation translationese", file=stream)
 
     logging.info("Merging result keys")
     for result, _ in results:
@@ -97,12 +99,12 @@ def print_results(results, stream, timer):
     attributes.sort()
 
     for attribute in attributes:
-        print >> stream, "@attribute %s numeric" % repr(attribute)
+        print("@attribute %s numeric" % repr(attribute), file=stream)
 
     # Class attribute should be last, as this is the weka default.
-    print >> stream, "@attribute class { T, O }"
-    print >> stream
-    print >> stream, "@data"
+    print("@attribute class { T, O }", file=stream)
+    print(file=stream)
+    print("@data", file=stream)
 
     logging.info("Printing results")
 
@@ -116,7 +118,7 @@ def print_results(results, stream, timer):
 
         sparse_attributes.append('%d %s' % (len(attributes), expected_class))
         stream.write(', '.join(sparse_attributes))
-        print >> stream, '}'
+        print('}', file=stream)
         timer.increment()
     timer.stop()
 
@@ -184,7 +186,7 @@ def get_output_stream(outfile, module_name, dest_dir=None):
     if dest_dir:
         try:
             os.makedirs(dest_dir)
-        except OSError, ex:
+        except OSError as ex:
             if ex.errno == errno.EEXIST:
                 pass
             else:

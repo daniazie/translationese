@@ -5,6 +5,7 @@ vowel-sequences that are delimited by consonants or space in a word, normalized
 by the number of tokens in the chunk.
 """
 
+from __future__ import absolute_import
 import translationese
 import re
 

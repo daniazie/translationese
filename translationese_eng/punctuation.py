@@ -5,6 +5,7 @@ translated texts are less ambiguous, and we assume that this tendency will
 manifest itself in the (different) way in which translated texts are
 punctuated.
 """
+from __future__ import absolute_import
 import translationese
 
 punctuation_marks = [ '?', '!', ':', ';', '-', '(', ')', '[', ']',

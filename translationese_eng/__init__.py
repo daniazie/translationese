@@ -1,7 +1,8 @@
+from __future__ import absolute_import
 import memoize
 import math
 import os
-from translationese.utils import flatten_list, sparse_dict_increment
+from translationese_eng.utils import flatten_list, sparse_dict_increment
 
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk
@@ -79,7 +80,7 @@ class Analysis(object):
         [[('I', 'PRP'), ('am', 'VBP'), ('fine', 'NN'), ('.', '.')],
         [('How', 'WRB'), ('are', 'VBP'), ('you', 'PRP'), ('?', '.')]]
         """
-        return nltk.batch_pos_tag(self.case_tokenized_sentences())
+        return nltk.pos_tag_sents(self.case_tokenized_sentences())
 
     @memoize.memoize
     def pos_tags(self):
@@ -172,18 +173,17 @@ class Analysis(object):
 
         return dict(bigram_pmi_pairs)
 
-import exceptions
-class MissingVariant(exceptions.Exception):
+class MissingVariant(Exception):
     """Exception thrown when no variant was specified when quantifying using
     a module that requires a variant specification."""
     pass
 
-class NoVariants(exceptions.Exception):
+class NoVariants(Exception):
     """Exception thrown when a variant was specified when quantifying using
     a module that does not support variant specification."""
     pass
 
-class NoSuchVariant(exceptions.Exception):
+class NoSuchVariant(Exception):
     """Exception thrown when an invalid variant was specified when quantifying
     using a module that supports variant specification."""
     def __init__(self):

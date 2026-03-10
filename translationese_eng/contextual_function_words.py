@@ -10,8 +10,9 @@ least two of the elements are functions words, and at most one is a POS tag.
 See also :mod:`translationese.function_words`.
 """
 
-from translationese.utils import output_filter_ngram, sparse_dict_increment
-from translationese.function_words import FUNCTION_WORDS
+from __future__ import absolute_import
+from translationese_eng.utils import output_filter_ngram, sparse_dict_increment
+from translationese_eng.function_words import FUNCTION_WORDS
 
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':

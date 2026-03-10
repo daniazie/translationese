@@ -3,11 +3,12 @@ Translations are known to excessively use certain cohesive markers (see list
 below).
 """
 
+from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk
 
-from translationese.utils import sparse_dict_increment
+from translationese_eng.utils import sparse_dict_increment
 
 COHESIVE_MARKERS = ["as for",
 "as to",

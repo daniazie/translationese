@@ -6,7 +6,8 @@ assumption by defining as features unigrams, bigrams and trigrams of
 POS tags.
 """
 
-from translationese.utils import output_filter_ngram, sparse_dict_increment
+from __future__ import absolute_import
+from translationese_eng.utils import output_filter_ngram, sparse_dict_increment
 
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':

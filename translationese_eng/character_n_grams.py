@@ -12,10 +12,11 @@ prefixes and suffixes. We do not capture cross-token character `n`-grams, and
 we exclude punctuation marks.
 """
 
+from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     from nltk.util import ingrams
-from translationese.utils import sparse_dict_increment
+from translationese_eng.utils import sparse_dict_increment
 
 __author__ = "Ohad Lutzky"
 __email__ = "ohad@lutzky.net"

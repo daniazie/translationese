@@ -7,7 +7,7 @@ import unittest
 
 import analyze
 import StringIO
-import translationese.lexical_variety
+import translationese_eng.lexical_variety
 import os.path
 
 class TestAnalyze(unittest.TestCase):

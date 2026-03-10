@@ -2,6 +2,7 @@
 The normalized frequencies of the `N` most frequent words in the corpus.
 Punctuation marks are excluded.
 """
+from __future__ import absolute_import
 import translationese
 from translationese import word_ranks
 

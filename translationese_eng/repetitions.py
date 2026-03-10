@@ -6,6 +6,7 @@ from the count since these verbs are commonly used as auxiliaries. This
 feature's values are magnified by an order of 3.
 """
 
+from __future__ import absolute_import
 from collections import Counter
 
 ignored_tokens = set([

@@ -1,5 +1,5 @@
 import unittest
-from translationese.positional_token_frequency import quantify
+from translationese_eng.positional_token_frequency import quantify
 from translationese import Analysis
 from util import SparseDictEqualMixin
 

@@ -5,8 +5,9 @@ personal pronouns to proper nouns, both singular and plural, magnified by an
 order of 3. See also :mod:`translationese.pronouns`.
 """
 
-from pronouns import PRONOUNS as PRONOUNS_LIST
-from translationese.utils import is_proper_noun
+from __future__ import absolute_import
+from .pronouns import PRONOUNS as PRONOUNS_LIST
+from translationese_eng.utils import is_proper_noun
 
 def quantify(analysis):
     """Quantify explicit naming."""

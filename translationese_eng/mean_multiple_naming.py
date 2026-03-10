@@ -4,11 +4,12 @@ Proper Nouns), magnified by an order of 3. The motivation for this feature is
 the same as :mod:`translationese.single_naming`.
 """
 
+from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk
 
-from translationese.utils import is_proper_noun
+from translationese_eng.utils import is_proper_noun
 
 def quantify(analysis):
     """Quantify mean multiple naming."""

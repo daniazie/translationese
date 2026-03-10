@@ -2,6 +2,7 @@
 We assume that translated texts use simpler words, in particular shorter ones.
 Punctuation marks are excluded from the tokens in this feature.  """
 
+from __future__ import absolute_import
 import os
 if os.environ.get("READTHEDOCS", None) != 'True':
     import nltk

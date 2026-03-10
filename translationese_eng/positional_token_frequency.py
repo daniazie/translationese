@@ -9,8 +9,9 @@ positions of a sentence are considered, while only the first two of them are
 interesting for our purposes.
 """
 
+from __future__ import absolute_import
 import translationese
-from translationese.utils import sparse_dict_increment
+from translationese_eng.utils import sparse_dict_increment
 
 POSITION_NAMES = {
                   "first": 0,

@@ -5,6 +5,7 @@ overuse highly associated words. We therefore use as a feature the average PMI
 (see :func:`translationese.Analysis.pmi`) of all bigrams in the chunk.
 """
 
+from __future__ import absolute_import
 import math
 
 def quantify(analysis):
